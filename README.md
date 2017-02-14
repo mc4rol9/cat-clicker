@@ -5,9 +5,13 @@ To develop a Javascript application to click over a Cat's Image, count and show 
 of clicks.
 
 The requirements for the project were changing over the classes: 
+
 1. Add a new cat to the app.
+
 2. Add more cat's and a list to choose between them.
+
 3. Refactor the code to a MV* design pattern.
+
 4. Add another View to show an Admin section to manually change cat's info.
 
 **_This project was made for Javascript Design Patterns class from Udacity Full Stack
@@ -29,7 +33,9 @@ The web design, front end is from my own portfolio and brand.
 You will find the core Javsascript for this project at:
 
 - `/assets`
-  -`/js
+
+  -`/js`
+  
       - `script.js`
 
 ## Built With
