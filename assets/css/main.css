@@ -1,0 +1,352 @@
+/*
+  Author: mc9dev
+  URL: http://mc9-dev.com
+
+  Project Name: mc9land portfolio
+  Version: 1.0
+  URL: http://mc9-dev.com
+/*
+
+/* colors reference: 
+   bright gray: #aeafaf
+   dark gray:   #4e4f53
+   yellow:      #ebb70a
+   green:       #5c9028
+   blue:        #528ec7
+   red:         #e1313e
+*/
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+/*@import url('@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,900');');
+
+
+/* General Styles */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  color: #4e4f53;
+  font: 400 18px/1.3em 'Ubuntu', sans-serif;
+  padding-top: 0;
+  padding-bottom: 90px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.h1-header {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.h4-header {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
+h2 {
+  color: #4e4f53;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 80px 0;
+}
+
+.head-text {
+  text-align: center !important;
+  padding: 3px;
+  background-color: #aeafaf;
+}
+
+p {
+  line-height: 1.2em;
+  margin: 0 0 20px;
+}
+
+a {
+  color: #5c9028;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #5c9028;
+  text-decoration: none;
+}
+
+.contact-link {
+    color: #4e4f53;
+}
+
+.fa {
+  padding-right: 10px;
+}
+
+.fa-grey {
+  color: #fff !important;
+}
+
+.footer .fa-linkedin,
+.footer .fa-github-alt,
+.footer .fa-twitter {
+  color: #fff;
+}
+
+.footer .fa-linkedin:hover,
+.footer .fa-github-alt:hover,
+.footer .fa-twitter:hover {
+	color: #ebb70a;
+}
+
+.fa-snowflake-o {
+  color: #528ec7;
+}
+
+.fa-heart {
+    color: #e1313e;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: #528ec7;
+}
+
+.fa-code {
+    font-weight: 700 !important;
+}
+
+header {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 100px 0;
+}
+
+.color-bar {
+  min-height: 100px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-header,
+.section-content {
+  border-bottom: 1px dashed #4e4f53;
+}
+
+.section-footer {
+  border-top: 1px dashed #4e4f53;
+  border-bottom: 1px dashed #4e4f53;
+  margin: 80px 0;
+}
+
+.section-content {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.section-footer p {
+  color: #4e4f53;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 50px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px;
+  background-color: #4e4f53;
+}
+
+.footer-content {
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+
+/* Classes */
+.centered {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+  padding-left: 0;
+}
+
+.right {
+  text-align: right;
+}
+
+.mrg-bottom {
+  margin-bottom: 80px;
+}
+
+.padding-top-bottom {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.txt-block p {
+  font-size: 1em;
+  line-height: 1.7em;
+  letter-spacing: 0;
+  text-align: justify;
+}
+
+.padding-fa {
+  padding: 0 10px; 
+}
+
+.white-txt {
+    color:#fff;
+}
+
+.yellow-txt {
+    color: #ebb70a;
+}
+
+.red-txt {
+    color: #e1313e;
+}
+
+.blue-txt {
+    color: #528ec7;
+}
+
+.green-txt {
+    color: #5c9028;
+}
+
+.yellow-background {
+    background-color: #ebb70a;
+}
+
+.blue-background {
+  background-color: #528ec7;
+}
+
+.red-background {
+  background-color: #e1313e;
+}
+
+.green-background {
+    background-color: #5c9028;
+}
+
+.grey-background {
+  background-color: #4e4f53;
+}
+
+
+/* Homepage/About */
+.main-header {
+  background-color: #4e4f53;
+}
+
+.main-header img {
+   margin: 0 auto; 
+}
+
+.lab-header {
+  background-color: #5c9028;
+}
+
+.lab-header .h1-header,
+.lab-header .h4-header {
+  color: #4e4f53;
+}
+
+
+/* Project Styles */
+.bgimg {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#greeting {
+  background-color: rgba(255,255,255,0.7);
+  padding: 15px;
+}
+
+#wikipedia-links {
+  padding-left: 0;
+}
+
+.wikipedia-container {
+  padding: 10px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.nytimes-container {
+  padding: 10px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.article-list {
+  margin: 0;
+  padding: 0;
+}
+
+.article {
+  list-style-type: none;
+  padding: 10px;
+  border-top: 1px solid #CCC;
+}
+
+.article:first-child {
+  border-top: none;
+}
+
+@media screen and (max-width: 768px) {
+    .h1-header {
+        font-size: 1em;
+    }
+    
+    .h4-header {
+        font-size: 0.9em;
+    }
+    
+    header {
+        padding: 100px 0;
+    }
+    
+    h2 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+    
+    .section-footer p {
+        font-size: 1em;
+    }
+    
+}
