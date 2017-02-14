@@ -30,31 +30,7 @@
 <![endif]-->
 </head>
 
-<body>
-<!-- <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/images/mc9land-logo.png" alt="my logo"  class="img-responsive"/>
-      </a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse pull-right">
-      <ul class="nav navbar-nav">
-        <li class="one"><a href="index.html">About</a></li>
-        <li class="two"><a href="development.html">Development</a></li>
-        <li class="three"><a href="design.html">Design</a></li>
-        <li class="four active"><a href="lab.html">Lab</a></li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
-    
+<body>    
 <header class="main-header">
   <div class="container">
     <div class="row">
@@ -79,14 +55,19 @@
       <div class="col-sm-12 mrg-bottom section-header">
         <h2 id="greeting">Click the Cat</h2>
       </div>
-      <div class="col-sm-6 centered">
-        <h1 id="cat1"></h1>
-        <img src="assets/images/tai.jpg" class="img-responsive" id="catPicture" alt="Picture of a black cat sleeping"><span class="badge" id="catBadge">0</span>
+
+      <div class="col-sm-9 centered" id="cat">
+        <h1 id="cat-name"></h1>
+        <img src="" class="img-responsive" id="cat-picture" alt="Picture of cat">
+        <span class="badge cat-click"></span>
       </div>  
 
-      <div class="col-sm-6 centered">
-        <h1 id="cat2"></h1>
-        <img src="assets/images/suki.jpg" class="img-responsive" id="catPicture1" alt="Picture of a black cat sleeping"><span class="badge" id="catBadge1">0</span>
+      <div class="col-sm-3 centered">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge cat-click"></span>
+          </li>
+        </ul>
       </div>  
 
       <div class="col-sm-12 mrg-bottom section-footer">
