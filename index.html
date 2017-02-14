@@ -57,14 +57,36 @@
       </div>
 
       <div class="col-sm-9" id="cat">
-        <h1 id="cat-name" class="pull-left"></h1>
-        <img src="" class="img-responsive" id="cat-picture" alt="Picture of cat">
-        <span class="badge pull-right" id="cat-click"></span>
+        <div class="col-sm-8 col-sm-offset-2">
+          <h1 id="cat-name" class="pull-left"></h1>
+          <img src="" class="img-responsive" id="cat-picture" alt="Picture of cat">
+          <span class="badge pull-right" id="cat-click"></span>
+        </div>
       </div>  
 
-      <div class="col-sm-3 right">
-        <ul class="list-group" id="cat-list">
-        </ul>
+      <div class="col-sm-3 right mrg-top">
+        <ul class="list-group" id="cat-list"></ul>
+
+        <button type="button" class="btn btn-default" id="admin">ADMIN</button>
+
+        <form id="admin-area">
+          <div class="form-group">
+            <label for="catName">Cat's Name</label>
+            <input type="text" class="form-control" id="catName" placeholder="Cat's Name" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="catPic">The URL for cat's picture</label>
+            <input type="text" class="form-control" id="catPic" placeholder="The URL for cat's picture" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="catCount">The number of clicks</label>
+            <input type="number" class="form-control" id="catCount" placeholder="The number of clicks" value="">
+          </div>
+          <button type="button" class="btn btn-default" id="save-btn">Save</button>
+          <button type="button" class="btn btn-default" id="cancel-btn">Cancel</button>
+        </form>
       </div>  
 
       <div class="col-sm-12 mrg-bottom section-footer">
@@ -83,7 +105,7 @@
 </div>
 
 <footer class="footer">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-8 col-xs-offset-2 footer-content">
         <p class="centered"><a href="https://br.linkedin.com/in/mariacarolina9" target="_blank">

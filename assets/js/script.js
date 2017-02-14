@@ -28,7 +28,7 @@ var model = {
 };
 
 
-/* ------ Controller ------ */
+/* ------ Octopus ------ */
 
 var octopus = {
   init: function() {
@@ -38,6 +38,7 @@ var octopus = {
     // tell views to initialize
     catView.init();
     catListView.init();
+    adminView.init();
   },
 
   getCurrentCat: function() {
@@ -58,6 +59,40 @@ var octopus = {
     model.currentCat.clickCount++;
     catView.render();
   },
+
+  // open the admin area
+  openAdmin: function() {
+    var admin = document.getElementById('admin-area');
+    // toggle visibility for admin area
+    if (admin.style.display === 'none') {
+      admin.style.display = 'block';
+    } else {
+      admin.style.display = 'none';
+    }
+    adminView.render();
+  },
+
+  // change cat's info from admin
+  saveChanges: function() {
+    this.newName = document.getElementById('catName').value;
+    this.newPic = document.getElementById('catPic').value;
+    this.newCount = document.getElementById('catCount').value;
+
+    if (this.newName !== '') {
+      model.currentCat.name = this.newName;
+    }
+
+    if (this.newPic !== '') {
+      model.currentCat.imgSrc = this.newPic;
+    }
+
+    if (this.newCount !== '') {
+      model.currentCat.clickCount = this.newCount;
+    }
+    
+    catView.render();
+    catListView.render();
+  }
 };
 
 
@@ -72,10 +107,16 @@ var catView = {
     this.catNameElem = document.getElementById('cat-name');
     this.catImageElem = document.getElementById('cat-picture');
     this.catCountElem = document.getElementById('cat-click');
+    this.adminBtn = document.getElementById('admin');
 
     // on click increment the counter
     this.catImageElem.addEventListener('click', function(e) {
       octopus.addToCounter();
+    });
+
+    // on click show admin area
+    this.adminBtn.addEventListener('click', function(e) {
+      octopus.openAdmin();
     });
 
     // update the view
@@ -130,6 +171,37 @@ var catListView = {
       // add element to the list
       this.catListElem.appendChild(elem);
     }; 
+  }
+};
+
+/* ---- Admin View ----*/
+var adminView = {
+  init: function() {
+     // store pointer to DOM elements for easy access
+    this.nameElem = document.getElementById('catName');
+    this.urlElem = document.getElementById('catPic');
+    this.countElem = document.getElementById('catCount');
+    this.saveBtnElem = document.getElementById('save-btn');
+    this.cancelBtnElem = document.getElementById('cancel-btn');
+
+    this.render();
+  },
+
+  render: function() {
+    var currentCat = octopus.getCurrentCat();
+    this.nameElem.value = currentCat.name;
+    this.urlElem.value = currentCat.imgSrc;
+    this.countElem.value = currentCat.clickCount;
+
+    this.saveBtnElem.addEventListener('click', function(e) {
+      octopus.saveChanges();
+      octopus.openAdmin();
+    });
+    
+    // cancel changes and close admin area
+    this.cancelBtnElem.addEventListener('click', function(e) {
+      octopus.openAdmin();
+    });
   }
 };
 
