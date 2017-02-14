@@ -34,7 +34,7 @@ You will find the core Javsascript for this project at:
 
 - `/assets`
 
-  -`/js`
+  - `/js`
   
       - `script.js`
 
